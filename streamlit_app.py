@@ -1,4 +1,3 @@
-
 import io
 import math
 import re
@@ -489,13 +488,8 @@ def screen_page():
 # ---------------------------
 
 def admin_page():
-    render_header("Hackathon control panel")
+    render_header("Private clinical similarity demo — admin control panel")
     st.caption(f"Current session: `{SESSION_ID}`")
-
-    st.write(
-        "Deploy this repository to Streamlit Community Cloud. Enter the final public app URL "
-        "below once, then download/print the QR codes."
-    )
 
     base_default = st.session_state.get(
         "base_url",
@@ -504,7 +498,7 @@ def admin_page():
     base_url = st.text_input("Public Streamlit app URL", value=base_default)
     st.session_state["base_url"] = base_url
 
-    session_input = st.text_input("Demo session ID", value=SESSION_ID)
+    session_input = 'demo' #st.text_input("Demo session ID", value=SESSION_ID)
     if session_input != SESSION_ID:
         st.caption(
             f"To use session `{session_input}`, open the admin page with "
@@ -548,14 +542,14 @@ def admin_page():
     st.link_button("Open presentation screen", s_url, use_container_width=True)
 
     session = STORE.get(SESSION_ID)
-    st.divider()
-    c3, c4, c5 = st.columns(3)
-    c3.metric("Juror A", "Ready" if session.a_ready else "Waiting")
-    c4.metric("Juror B", "Ready" if session.b_ready else "Waiting")
-    c5.metric(
-        "Similarity",
-        f"{session.score * 100:.1f}%" if session.score is not None else "—",
-    )
+    # st.divider()
+    # c3, c4, c5 = st.columns(3)
+    # c3.metric("Juror A", "Ready" if session.a_ready else "Waiting")
+    # c4.metric("Juror B", "Ready" if session.b_ready else "Waiting")
+    # c5.metric(
+    #     "Similarity",
+    #     f"{session.score * 100:.1f}%" if session.score is not None else "—",
+    # )
 
     if st.button("Reset this demo session", use_container_width=True):
         STORE.reset(SESSION_ID)
