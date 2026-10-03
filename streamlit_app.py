@@ -455,7 +455,7 @@ def screen_page():
     st.markdown(
         '<div style="text-align:center; margin-top:4rem; color:#69757f; '
         'font-size:.85rem; letter-spacing:.11em; font-weight:750;">'
-        'ZEBRA · PRIVATE CLINICAL SIMILARITY</div>',
+        'ZEBRAQ · PRIVATE CLINICAL SIMILARITY</div>',
         unsafe_allow_html=True,
     )
 
