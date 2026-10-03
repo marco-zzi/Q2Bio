@@ -499,7 +499,7 @@ def admin_page():
 
     base_default = st.session_state.get(
         "base_url",
-        "https://YOUR-APP-NAME.streamlit.app",
+        "https://q2bio-bio-red-hackathon.streamlit.app",
     )
     base_url = st.text_input("Public Streamlit app URL", value=base_default)
     st.session_state["base_url"] = base_url
