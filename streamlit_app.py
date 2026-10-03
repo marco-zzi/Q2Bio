@@ -556,25 +556,25 @@ def admin_page():
         st.success("Session reset.")
         st.rerun()
 
-    with st.expander("What this simplified demo does / does not prove"):
-        st.write(
-            """
-            **It demonstrates**
-            - QR → juror form → de-identification logic → vectorization → encryption → similarity.
-            - Name and city are excluded from the feature vector.
-            - Only encrypted representations are retained in shared demo state.
-            - The presentation screen releases only the similarity score.
-            - A real Paillier homomorphic operation is used for the dot-product demonstration.
+    # with st.expander("What this simplified demo does / does not prove"):
+    #     st.write(
+    #         """
+    #         **It demonstrates**
+    #         - QR → juror form → de-identification logic → vectorization → encryption → similarity.
+    #         - Name and city are excluded from the feature vector.
+    #         - Only encrypted representations are retained in shared demo state.
+    #         - The presentation screen releases only the similarity score.
+    #         - A real Paillier homomorphic operation is used for the dot-product demonstration.
 
-            **It does not claim**
-            - End-to-end patient privacy from Streamlit Cloud itself.
-            - Production-grade cryptographic key management.
-            - Production medical NLP or validated diagnosis.
-            - Regulatory approval.
+    #         **It does not claim**
+    #         - End-to-end patient privacy from Streamlit Cloud itself.
+    #         - Production-grade cryptographic key management.
+    #         - Production medical NLP or validated diagnosis.
+    #         - Regulatory approval.
 
-            For the hackathon, use synthetic cases only.
-            """
-        )
+    #         For the hackathon, use synthetic cases only.
+    #         """
+    #     )
 
 
 # ---------------------------
