@@ -303,7 +303,7 @@ def protected_similarity_with_a_encrypted(
 
 
 def render_header(subtitle: str):
-    st.markdown('<div class="zebra-title">🦓 Zebra</div>', unsafe_allow_html=True)
+    st.markdown('<div class="zebra-title">🦓 ZebraQ</div>', unsafe_allow_html=True)
     st.markdown(f'<div class="zebra-sub">{subtitle}</div>', unsafe_allow_html=True)
 
 
